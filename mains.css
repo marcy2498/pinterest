@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    /* ~ 1rem */
+}
+
+:root {
+    --pin_width: 15.625rem;
+    --row_increment: 0.625rem;
+    --pin_radius: 1rem;
+
+    /* Factor de escala */
+    --pin_small: 26;
+    --pin_medium: 34;
+    --pin_large: 46;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(164, 12, 12);
+}
+
+nav {
+    height: 5rem;
+    background-color: white;
+    display: flex;
+}
+.icon:hover{
+    cursor: pointer;
+    background-color: #e9e9e9;
+    border-radius: 50px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+.navbar-navegacion {
+    min-width: 18rem;
+    background-color: white;
+}
+.nav {
+    display: flex ;
+}
+.icon1 {
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+.icon1:hover {
+    cursor: pointer;
+    background-color: #e9e9e9;
+    border-radius: 50px;
+    padding: 5px;
+    transition: all 0.3s;
+}
+.ul1 {
+    display: flex;
+    list-style: none;
+    margin-right: 2.5rem;
+}
+li {
+    margin: 0 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    
+}
+.inicio {
+    background-color: #111111;
+    color: white;
+    border-radius: 25px;
+    padding: 12px;
+    
+}
+.navbar-busqueda {
+    flex-grow: 4;
+    min-width: 3rem;
+    background-color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar-perfil { 
+    display: flex;
+    align-items: center;
+    
+    min-width: 11rem;
+    justify-content: space-around;
+}
+
+.pin_contenedor {
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--pin_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+}
+
+.pin {
+    position: relative;
+    margin: 1rem 0.8rem;
+    border-radius: var(--pin_radius);
+    background-color: cadetblue;
+}
+
+/* imagen */
+.pin_contenido {
+    height: 100%;
+    width: 100%;
+    /* background-image:  url(https://st2.depositphotos.com/1592314/6394/i/450/depositphotos_63948015-stock-photo-vintage-typewriter-with-textured-grungy.jpg);
+    */ background-size: cover;
+    border-radius: var(--pin_radius);
+    text-align: center;
+}
+
+/* botones en el hover (al pasar el raton encima) */
+.pin_botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: var(--pin_radius);
+    position: absolute;
+    top: 0;
+    left: 0.0;
+    /* Totalmente invisible */
+    opacity: 0;
+    color: white;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.botones2{
+margin-left: 4.5rem;
+margin-right: 0.9rem;
+display: flex;
+border-radius: 80px;
+padding: 12px;
+align-items: end;
+justify-content:space-evenly
+}
+
+
+.pin_botones:hover {
+    /* Totalmente visible */
+    opacity: 0.7;
+}
+
+.pin_pequenio {
+    grid-row-end: span var(--pin_small);
+}
+
+.pin_mediano {
+    grid-row-end: span var(--pin_medium);
+}
+
+.pin_grande {
+    grid-row-end: span var(--pin_large);
+}
+
+
+/* Estilos para el input personalizado */
+
+.navbar_input_search {
+    margin-inline: 0.8rem;
+    padding-inline-start: 0.8rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #e9e9e9;
+    border-radius: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.navbar_input_search:hover {
+    cursor: pointer;
+    background-color: #dcdbdb;
+    border-radius: 50px;
+    padding: 10px;
+    transition: all 0.3s;
+    
+}
+
+.navbar_input_search>svg {
+    height: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar_input_search>input {
+    height: 2rem;
+    flex-grow: 3;
+    margin-inline-end: 1rem;
+    margin-inline-start: 0.8rem;
+    background-color: transparent;
+    border-style: none;
+}
+
+.navbar_input_search>input:focus-visible {
+    outline: none;
+}
+
+.pinterest-icono {
+    height: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.home-icon {
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.botton {
+    /* padding: 1% 1%; */
+    /*height: 25%;
+    width: 25%;
+    color: white;
+    background-size: cover;*/
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 8rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 780px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        margin-top: 4rem;
+    }
+    
+    .pin_contenedor {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, var(--pin_width));
+        grid-auto-rows: var(--row_increment);
+        justify-content: center;
+        margin-top: 5rem;
+    }
+    
+    .navbar-navegacion {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .nav {
+        display: flex;
+    }
+    
+    .icon1 {
+        display: flex;
+        margin-left: 1rem;
+        margin-top: 4rem;
+    }
+    /*
+    .icon1:hover {
+        cursor: pointer;
+        background-color: rgb(228, 235, 229);
+        border-radius: 50px;
+        padding: 5px;
+        transition: all 0.3s;
+    }*/
+    
+    .ul1 {
+        display: flex;
+        list-style: none;
+        margin-right: 2rem;
+    }
+    
+    li {
+        margin: 0 0.8rem;
+        font-size: 1rem;
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+    }
+    /*
+    li:hover {
+        cursor: pointer;
+    }
+    */
+    
+    .inicio {
+        background-color: black;
+        color: white;
+        padding: 0.6rem 0.6rem;
+        border-radius: 40px;
+    }
+    
+    /* barra busqueda*/
+    
+    .navbar-busqueda {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: auto;
+        margin-top: 1.5rem;
+    }
+    
+    .input {
+        width: 50%;
+        height: 2.5rem;
+        font-size: 1rem;
+        color: black;
+        background-color: rgb(245, 245, 245);
+        border-radius: 25px;
+        border: none;
+        padding-left: 4rem;
+    
+    }
+    
+    .input:hover {
+        background-color: rgb(209, 207, 207);
+        
+    }
+    
+    .searchicon {
+        position:absolute;
+        margin-left: 1rem;
+        align-self: center;
+    }
+    
+    /* barra perfil*/
+    
+    .navbar-perfil {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+    }
+    
+    .icon {
+        width: 1.2rem;
+        height: 1.4rem;
+        margin: 0 0.6rem;
+    }
+    
+    .icon:hover {
+        cursor: pointer;
+        background-color: rgb(219, 211, 211);
+        border-radius: 50px;
+    }
+}
