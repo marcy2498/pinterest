@@ -1,0 +1,45 @@
+button{
+    background-color: rgb(117, 44, 117);
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 25px;
+    color: black;
+    font-size: 15px;
+}
+.button:hover{
+    background-color: aquamarine;
+}
+title{
+    background-color: color(from color srgb r g b);
+    margin-top: auto;
+    content: icon;
+
+}
+#logo{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top:130px ;
+    width: 700px;
+}
+#logo img{
+    max-width: 100%;
+}
+h1{
+    background-color: rgb(175, 225, 124);
+    margin: 1px;
+    border: 0cap;
+    color: black;
+}
+h2{
+    background-color: rgb(224, 160, 39);
+    margin: 1px;
+    border:0cap ;
+    color: black;
+}
+h3{
+    background-color: rgb(93, 93, 222);
+    margin: 1px;
+    border: 0cap;
+    color: black;
+}
